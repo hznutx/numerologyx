@@ -21,7 +21,6 @@ const LuckyTimeYearPage: React.FC<ILuckyTimePage> = ({year}) => {
     luckyTime: '',
   });
 
-  // Fetch global date and time
   useEffect(() => {
     const fetchDateTime = async () => {
       const response = await fetch('/api/calendar/date-time');
@@ -31,7 +30,6 @@ const LuckyTimeYearPage: React.FC<ILuckyTimePage> = ({year}) => {
     fetchDateTime();
   }, []);
 
-  // Fetch existing lucky dates
   useEffect(() => {
     const fetchLuckyDates = async () => {
       const response = await fetch('/api/calendar/lucky-dates');
@@ -41,9 +39,8 @@ const LuckyTimeYearPage: React.FC<ILuckyTimePage> = ({year}) => {
     fetchLuckyDates();
   }, []);
 
-  const fullDateTime = `${newLuckyDate.luckyDate}T${newLuckyDate.luckyTime}:00`; // Combine date and time into ISO string
+  const fullDateTime = `${newLuckyDate.luckyDate}T${newLuckyDate.luckyTime}:00`;
 
-  // Add a new lucky date
   const addLuckyDate = async () => {
     const response = await fetch('/api/calendar/lucky-dates', {
       method: 'POST',
@@ -55,19 +52,14 @@ const LuckyTimeYearPage: React.FC<ILuckyTimePage> = ({year}) => {
     const data = await response.json();
     if (data.luckyDate) {
       setLuckyDates((prevDates) => [...prevDates, data.luckyDate]);
-      setNewLuckyDate({luckyDate: '', luckyTime: ''}); // Reset after successful addition
+      setNewLuckyDate({luckyDate: '', luckyTime: ''});
     }
   };
 
-  // Function to update both the luckyDate and luckyTime
   const handleDateChange = (date: ZonedDateTime | null) => {
     if (date) {
-      const localDate = date.toDate(); // Convert to JS Date object
-
-      // Format the date as "YYYY-MM-DD"
+      const localDate = date.toDate();
       const formattedDate = localDate.toISOString().split('T')[0];
-
-      // Format the time as "HH:mm" (24-hour format)
       const formattedTime = localDate.toLocaleTimeString('en-US', {
         hour: '2-digit',
         minute: '2-digit',
@@ -80,7 +72,6 @@ const LuckyTimeYearPage: React.FC<ILuckyTimePage> = ({year}) => {
     }
   };
 
-  // Format the lucky date and time before rendering
   const luckyDateValue = newLuckyDate.luckyDate ? parseAbsoluteToLocal(`${newLuckyDate.luckyDate}T${newLuckyDate.luckyTime}:00Z`) : undefined;
 
   return (
@@ -92,7 +83,6 @@ const LuckyTimeYearPage: React.FC<ILuckyTimePage> = ({year}) => {
         <div className='w-80'>
           <DatePicker
             size='sm'
-            label='Select Lucky Date and Time'
             granularity='minute'
             value={luckyDateValue}
             onChange={handleDateChange}

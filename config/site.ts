@@ -1,7 +1,7 @@
 export type SiteConfig = typeof siteConfig;
 
 export const siteConfig = {
-  name: 'เชคเบอร์มงคล',
+  name: 'Numerology',
   description: 'เบอร์มงคลที่ช่วยให้คุณประสบความสำเร็จ',
   navItems: [
     {
@@ -10,7 +10,7 @@ export const siteConfig = {
     },
 
     {
-      label: 'เชคเบอร์มงคล',
+      label: 'Analyst',
       href: '/check',
     },
   ],

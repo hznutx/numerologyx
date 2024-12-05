@@ -3,7 +3,7 @@ import React from 'react';
 
 type LuckyDate = {
   id: string;
-  luckyDateTime: string; // ISO string format: "YYYY-MM-DDTHH:mm:ss"
+  luckyDateTime: string;
 };
 
 const months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
@@ -15,13 +15,11 @@ interface LuckyCalendarProps {
 const LuckyCalendar: React.FC<LuckyCalendarProps> = ({luckyDates}) => {
   const currentYear = new Date().getFullYear();
 
-  // Helper to check if a day is lucky for a given month
   const isLuckyDay = (year: string, monthIndex: number, day: number) => {
     const formattedDate = `${year}-${String(monthIndex + 1).padStart(2, '0')}-${String(day).padStart(2, '0')}`;
 
-    // Check if the date portion (YYYY-MM-DD) of luckyDateTime matches the formatted date
     return luckyDates.some((date) => {
-      const luckyDate = date.luckyDateTime.split('T')[0]; // Extract date part of luckyDateTime (YYYY-MM-DD)
+      const luckyDate = date.luckyDateTime.split('T')[0];
       return luckyDate === formattedDate;
     });
   };
@@ -48,7 +46,6 @@ const LuckyCalendar: React.FC<LuckyCalendarProps> = ({luckyDates}) => {
                     const day = weekIndex * 7 + dayIndex + 1;
                     const date = new Date(currentYear, monthIndex, day);
 
-                    // Skip rendering the day if it's not part of the current month
                     if (date.getMonth() !== monthIndex) return <td key={dayIndex}></td>;
 
                     const isLucky = isLuckyDay(String(currentYear), monthIndex, day);
@@ -58,8 +55,8 @@ const LuckyCalendar: React.FC<LuckyCalendarProps> = ({luckyDates}) => {
                         key={dayIndex}
                         style={{
                           padding: '10px',
-                          backgroundColor: isLucky ? 'gold' : 'white',
-                          color: isLucky ? 'black' : 'gray',
+                          backgroundColor: isLucky ? 'white' : 'white',
+                          color: 'gray',
                           textAlign: 'center',
                           border: '1px solid #ddd',
                           position: 'relative',
@@ -70,9 +67,9 @@ const LuckyCalendar: React.FC<LuckyCalendarProps> = ({luckyDates}) => {
                             style={{
                               position: 'absolute',
                               top: '0',
-                              right: '0',
-                              fontSize: '0.5rem',
-                              color: 'navy',
+                              right: '1',
+                              fontSize: '0.7rem',
+                              color: 'gold',
                             }}>
                             ★
                           </span>
