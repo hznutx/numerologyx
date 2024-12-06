@@ -1,5 +1,4 @@
 import {nextui} from '@nextui-org/theme';
-import {color} from 'framer-motion';
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
@@ -15,7 +14,7 @@ module.exports = {
     },
     extend: {
       fontFamily: {
-        kanit: ['kanit', 'sans-serif'],
+        kanit: ['Kanit', 'sans-serif'], // Capitalize "Kanit" to ensure proper font loading.
       },
       colors: {
         common: {

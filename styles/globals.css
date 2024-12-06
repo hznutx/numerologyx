@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Hide Safari scrollbars */
+.hidden-safari-scroll {
+  overflow: hidden;
+}
+
 .hidden-safari-scroll::-webkit-scrollbar {
   width: 0px;
   display: none;
@@ -11,8 +16,10 @@
   display: none;
 }
 
+/* Base styles */
 @layer base {
-  * {
+  html,
+  body {
     scroll-behavior: smooth;
     letter-spacing: 0.4px;
     margin: 0;
@@ -31,6 +38,7 @@
   }
 }
 
+/* Hover link utility */
 .hover-link {
   transition: color 0.3s;
 }
@@ -39,18 +47,13 @@
   color: #3498db;
 }
 
+/* Body font settings */
 body {
   font-family: 'Kanit', sans-serif;
+  font-weight: 400;
 }
 
-@font-face {
-  font-family: 'Kanit';
-  src:
-    local('Kanit'),
-    url('../assets/fonts/Kanit-Regular.ttf') format('truetype');
-}
-
-/* From Uiverse.io by andrew-demchenk0 */
+/* Pyramid loader */
 .pyramid-loader {
   position: relative;
   width: 200px;
@@ -77,8 +80,6 @@ body {
 .pyramid-loader .wrapper .side {
   width: 90px;
   height: 90px;
-  /* you can choose any gradient or color you want */
-  /* background: radial-gradient( #2F2585 10%, #F028FD 70%, #2BDEAC 120%); */
   position: absolute;
   top: 0;
   left: 0;
@@ -122,3 +123,6 @@ body {
   transform: rotateX(90deg) translateZ(-40px);
   filter: blur(12px);
 }
+
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@400;700&display=swap');
