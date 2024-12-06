@@ -1,10 +1,10 @@
 'use client';
 
-import Pyramid from '@/components/elements/triangular';
 import {PhoneNumber} from '@/pages/api/phone-numbers';
 import {usePhoneNumbers} from '@/services/find';
 import {Input} from '@nextui-org/input';
 import React, {useState} from 'react';
+// import Triangular from '../elements/triangular';
 
 const positions = Array.from({length: 10}, (_, i) => i + 1);
 
@@ -24,7 +24,7 @@ const SearchPhoneNumber = () => {
 
   return (
     <div className='container mx-auto space-y-4 max-w-md'>
-      <Pyramid />
+      {/* <Triangular /> */}
       <h1 className='text-xl font-semibold'>ค้นหาเบอร์มงคล</h1>
 
       <div className='flex gap-1'>
