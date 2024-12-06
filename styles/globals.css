@@ -123,6 +123,3 @@ body {
   transform: rotateX(90deg) translateZ(-40px);
   filter: blur(12px);
 }
-
-/* Import Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@400;700&display=swap');
