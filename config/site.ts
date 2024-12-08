@@ -10,7 +10,7 @@ export const siteConfig = {
     },
 
     {
-      label: 'Analyst',
+      label: 'วิเคราะห์เบอร์ปัจจุบัน',
       href: '/check',
     },
   ],

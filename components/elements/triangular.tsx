@@ -2,7 +2,7 @@
 const Triangular: React.FC = () => {
   return (
     <div className='relative flex justify-center items-center w-full'>
-      {/* <div className='pyramid-loader'>
+      <div className='pyramid-loader'>
         <div className='wrapper'>
           <span className='side side1' />
           <span className='side side2' />
@@ -10,7 +10,7 @@ const Triangular: React.FC = () => {
           <span className='side side4' />
           <span className='shadow' />
         </div>
-      </div> */}
+      </div>
     </div>
   );
 };

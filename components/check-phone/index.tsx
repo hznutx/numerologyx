@@ -46,9 +46,8 @@ const CheckResultMeaningPhoneNumber = () => {
   };
 
   return (
-    <div className='space-y-4'>
+    <div className='space-y-3'>
       <h1>คำนวณผลรวมเบอร์โทรศัพท์</h1>
-
       <Input
         type='text'
         placeholder='กรอกเบอร์โทรศัพท์'

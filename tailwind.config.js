@@ -24,7 +24,7 @@ module.exports = {
         initial: '#CCCCCC',
         prime: '#465670',
         primary: '#4c84b5',
-        default: '#8DC1EF',
+        default: '#8defdb',
         secondary_1: '#007991',
         secondary_2: '#4d9ee6',
         secondary: '#A14686',
