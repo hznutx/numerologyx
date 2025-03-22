@@ -1,10 +1,10 @@
 'use client';
-import {Input} from '@nextui-org/input';
+import {Input} from "@heroui/input";
 import React, {useState} from 'react';
 import Triangular from '../elements/triangular';
 import {trimRegexAndThaiCharacters} from '@/utils';
 import PhoneCard, {IPhoneData} from '../card/PhoneCard';
-import {Button, useDisclosure} from '@nextui-org/react';
+import {Button, useDisclosure} from "@heroui/react";
 
 const positions = Array.from({length: 10}, (_, i) => i + 1);
 

@@ -1,7 +1,7 @@
 export type SiteConfig = typeof siteConfig;
 
 export const siteConfig = {
-  name: 'Numerology',
+  name: 'Numerologyx',
   description: 'เบอร์มงคลที่ช่วยให้คุณประสบความสำเร็จ',
   navItems: [
     {

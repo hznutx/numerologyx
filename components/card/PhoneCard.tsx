@@ -1,5 +1,5 @@
-import {Image} from '@nextui-org/react';
-import {cn} from '@nextui-org/theme';
+import {Image} from "@heroui/react";
+import {cn} from "@heroui/theme";
 
 export interface IPhoneData {
   phone: string;

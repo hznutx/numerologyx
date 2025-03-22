@@ -4,7 +4,7 @@ import SearchPhoneNumber from '@/components/search-number';
 
 import {usePhoneNumbers} from '@/services/find';
 
-import {Modal, ModalContent, ModalBody, ModalFooter, Button, useDisclosure} from '@nextui-org/react';
+import {Modal, ModalContent, ModalBody, ModalFooter, Button, useDisclosure} from "@heroui/react";
 import {useState} from 'react';
 
 const positions = Array.from({length: 10}, (_, i) => i + 1);

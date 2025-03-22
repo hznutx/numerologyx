@@ -3,7 +3,7 @@
 import {useEffect, useState} from 'react';
 import LuckyCalendar from './LuckyCalendar';
 import {ZonedDateTime, parseAbsoluteToLocal} from '@internationalized/date';
-import {Button, DatePicker} from '@nextui-org/react';
+import {Button, DatePicker} from "@heroui/react";
 
 type LuckyDate = {
   id: string;
