@@ -28,7 +28,7 @@ export const siteConfig = {
   links: {
     github: 'https://github.com/hznutx',
     twitter: 'https://twitter.com/hznutx',
-    discord: 'https://discord.gg/9b6yyZKmH4',
-    sponsor: 'https://patreon.com/jrgarciadev',
+    discord: 'https://discord.gg/ZVkpqCWX',
+    sponsor: 'https://i.ibb.co/8LhJnyht/image0.jpg',
   },
 };

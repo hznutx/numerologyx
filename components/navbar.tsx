@@ -1,7 +1,7 @@
-import {Navbar as NextUINavbar, NavbarContent, NavbarMenu, NavbarMenuToggle, NavbarBrand, NavbarItem, NavbarMenuItem} from "@heroui/navbar";
-import {Button} from "@heroui/button";
-import {Link} from "@heroui/link";
-import {link as linkStyles} from "@heroui/theme";
+import {Navbar as NextUINavbar, NavbarContent, NavbarMenu, NavbarMenuToggle, NavbarBrand, NavbarItem, NavbarMenuItem} from '@heroui/navbar';
+import {Button} from '@heroui/button';
+import {Link} from '@heroui/link';
+import {link as linkStyles} from '@heroui/theme';
 import NextLink from 'next/link';
 import clsx from 'clsx';
 import {VscMenu} from 'react-icons/vsc';
@@ -10,6 +10,7 @@ import {siteConfig} from '@/config/site';
 import {ThemeSwitch} from '@/components/theme-switch';
 import {TwitterIcon, GithubIcon, DiscordIcon, HeartFilledIcon, Logo} from '@/components/icons';
 import {kanit} from '@/app/layout';
+import SponsorButton from './design-system/SponsorButton';
 
 export const Navbar = () => {
   return (
@@ -69,15 +70,7 @@ export const Navbar = () => {
           <ThemeSwitch />
         </NavbarItem>
         <NavbarItem className='hidden md:flex'>
-          <Button
-            isExternal
-            as={Link}
-            className='text-sm font-normal text-default-600 bg-default-100'
-            href={siteConfig.links.sponsor}
-            startContent={<HeartFilledIcon className='text-danger' />}
-            variant='flat'>
-            Sponsor
-          </Button>
+          <SponsorButton />
         </NavbarItem>
       </NavbarContent>
 
